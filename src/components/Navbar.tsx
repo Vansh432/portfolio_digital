@@ -70,9 +70,8 @@ export default function Navbar() {
             <img
               src="/vigyapan%20logo222.png"
               alt="Dizital Vigyapan logo"
-              className="nav-logo-image w-10"
+              className="nav-logo-image"
             />
-
           </a>
 
           <div className="nav-links">
