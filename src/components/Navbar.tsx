@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Industries', href: '#industries' },
+  // { label: 'Industries', href: '#industries' },
   { label: 'Process', href: '#process' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
@@ -67,7 +67,12 @@ export default function Navbar() {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-inner">
           <a href="#home" className="nav-logo">
-            DIZITAL <span>VIGYAPAN</span>
+            <img
+              src="/vigyapan%20logo222.png"
+              alt="Dizital Vigyapan logo"
+              className="nav-logo-image w-10"
+            />
+
           </a>
 
           <div className="nav-links">

@@ -20,14 +20,14 @@ export default function Home() {
       <HeroSection />
       <StatsCounter />
       <AboutSection />
-      <FounderSection />
+      {/* <FounderSection /> */}
       <ServicesSection />
-      <IndustriesSection />
+      {/* <IndustriesSection /> */}
       <ProcessSection />
       <WhyTrustSection />
       <TestimonialsSection />
-      <ROICalculator />
-      <ClientPhotos />
+      {/* <ROICalculator /> */}
+      {/* <ClientPhotos /> */}
       <FreeAuditForm />
       <FAQSection />
       <ContactSection />
