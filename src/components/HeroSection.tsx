@@ -1,4 +1,35 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+const services = [
+  'Meta Ads', 'Google Ads', 'Social Media Marketing',
+  'Website Design', 'SEO Services', 'Lead Generation', 'Graphic Designing',
+];
+
+const EASE_OUT = [0.25, 0.46, 0.45, 0.94] as const;
+const EASE_SPRING = [0.34, 1.56, 0.64, 1] as const;
+
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12, delayChildren: 2.3 } },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: EASE_OUT } },
+};
+
+const tagVariant = {
+  hidden: { opacity: 0, scale: 0.85, y: 10 },
+  show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4, ease: EASE_SPRING } },
+};
+
+const tagsContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
+};
 
 export default function HeroSection() {
   return (
@@ -20,64 +51,63 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="container">
-        <div className="hero-content">
+        <motion.div
+          className="hero-content"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           {/* Badge */}
-          <div className="hero-badge">
+          <motion.div className="hero-badge" variants={fadeUp}>
             <span className="dot" />
             Bareilly&apos;s Leading Digital Marketing Agency
-          </div>
+          </motion.div>
 
           {/* Title */}
-          <h1 className="hero-title">
+          <motion.h1 className="hero-title" variants={fadeUp}>
             Grow Your Business Online with{' '}
             <span className="highlight">Results-Driven</span> Digital Marketing
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="hero-subtitle">
+          <motion.p className="hero-subtitle" variants={fadeUp}>
             Transforming Businesses Into Brands Through Digital Innovation.
             We help businesses generate more leads, increase sales, and build
             a strong online presence.
-          </p>
+          </motion.p>
 
           {/* Service Tags */}
-          <div className="hero-services">
-            {[
-              'Meta Ads',
-              'Google Ads',
-              'Social Media Marketing',
-              'Website Design',
-              'SEO Services',
-              'Lead Generation',
-              'Graphic Designing',
-            ].map((service) => (
-              <span key={service} className="tag">
+          <motion.div className="hero-services" variants={tagsContainer}>
+            {services.map((service) => (
+              <motion.span key={service} className="tag" variants={tagVariant}>
                 <span className="check">✓</span>
                 {service}
-              </span>
+              </motion.span>
             ))}
-          </div>
+          </motion.div>
 
           {/* CTA Buttons */}
-          <div className="hero-btns">
+          <motion.div className="hero-btns" variants={fadeUp}>
             <a href="#contact" className="btn btn-primary">
               Get Free Consultation
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <a href="#roi-calculator" className="btn btn-outline">
-              Calculate Your ROI
-            </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="scroll-indicator">
+      <motion.div
+        className="scroll-indicator"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3.2, duration: 0.6 }}
+      >
         <div className="mouse" />
         <span>Scroll</span>
-      </div>
+      </motion.div>
     </section>
   );
 }

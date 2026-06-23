@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import StickyConsultation from '@/components/StickyConsultation';
+import LoadingScreen from '@/components/LoadingScreen';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -101,6 +102,7 @@ export default function RootLayout({
         />
       </head>
       <body style={{ fontFamily: 'var(--font-inter), Inter, system-ui, sans-serif' }}>
+        <LoadingScreen />
         <Navbar />
         <main>{children}</main>
         <WhatsAppButton />
