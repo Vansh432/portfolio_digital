@@ -1230,3 +1230,6 @@
   .hero-btns { @apply flex-col; }
   .hero-btns .btn { @apply w-full; }
 }
+
+
+

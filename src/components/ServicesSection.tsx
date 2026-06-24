@@ -186,6 +186,70 @@ function EnquiryModal({
 
 const services = [
   {
+    id: 3,
+    title: 'Social Media Marketing',
+    subtitle: 'Brand Presence',
+    description:
+      'Build a powerful brand presence that turns followers into loyal paying customers.',
+    features: [
+      'Content Creation',
+      'Social Media Management',
+      'Engagement Growth',
+      'Creative Designing',
+      'Monthly Content Calendar',
+    ],
+    metric: '12.8K Avg Growth',
+    metricLabel: 'Followers / Mo',
+  },
+    {
+    id: 7,
+    title: 'Lead Generation',
+    subtitle: 'Quality Leads',
+    description:
+      'High-quality, verified leads ready to convert into paying customers for your business.',
+    features: [
+      'Real Estate Leads',
+      'Healthcare Leads',
+      'Education Leads',
+      'Finance Leads',
+      'Local Business Leads',
+    ],
+    metric: '18% Conv. Rate',
+    metricLabel: 'Conversion',
+  },
+    {
+    id: 2,
+    title: 'Google Ads',
+    subtitle: 'Search & Display',
+    description:
+      'Dominate search results and reach customers actively looking for your services.',
+    features: [
+      'Search Ads',
+      'Display Ads',
+      'YouTube Ads',
+      'Local Business Ads',
+      'Remarketing Campaigns',
+    ],
+    metric: '8.4% Avg CTR',
+    metricLabel: 'Click Rate',
+  },
+    {
+    id: 4,
+    title: 'Website Design & Dev',
+    subtitle: 'Digital Experience',
+    description:
+      'Professional, conversion-optimised websites that represent your brand powerfully.',
+    features: [
+      'Business Websites',
+      'E-Commerce Stores',
+      'Landing Pages',
+      'Portfolio Websites',
+      'Mobile Responsive',
+    ],
+    metric: '< 1s Load Time',
+    metricLabel: 'Performance',
+  },
+  {
     id: 1,
     tag: 'Most Popular',
     title: 'Meta Advertising',
@@ -202,54 +266,8 @@ const services = [
     metric: '3.5× Avg ROAS',
     metricLabel: 'Performance',
   },
-  {
-    id: 2,
-    title: 'Google Ads',
-    subtitle: 'Search & Display',
-    description:
-      'Dominate search results and reach customers actively looking for your services.',
-    features: [
-      'Search Ads',
-      'Display Ads',
-      'YouTube Ads',
-      'Local Business Ads',
-      'Remarketing Campaigns',
-    ],
-    metric: '8.4% Avg CTR',
-    metricLabel: 'Click Rate',
-  },
-  {
-    id: 3,
-    title: 'Social Media Marketing',
-    subtitle: 'Brand Presence',
-    description:
-      'Build a powerful brand presence that turns followers into loyal paying customers.',
-    features: [
-      'Content Creation',
-      'Social Media Management',
-      'Engagement Growth',
-      'Creative Designing',
-      'Monthly Content Calendar',
-    ],
-    metric: '12.8K Avg Growth',
-    metricLabel: 'Followers / Mo',
-  },
-  {
-    id: 4,
-    title: 'Website Design & Dev',
-    subtitle: 'Digital Experience',
-    description:
-      'Professional, conversion-optimised websites that represent your brand powerfully.',
-    features: [
-      'Business Websites',
-      'E-Commerce Stores',
-      'Landing Pages',
-      'Portfolio Websites',
-      'Mobile Responsive',
-    ],
-    metric: '< 1s Load Time',
-    metricLabel: 'Performance',
-  },
+
+
   {
     id: 5,
     title: 'SEO Optimization',
@@ -282,22 +300,70 @@ const services = [
     metric: '200+ Designs / Mo',
     metricLabel: 'Output',
   },
-  {
-    id: 7,
-    title: 'Lead Generation',
-    subtitle: 'Quality Leads',
-    description:
-      'High-quality, verified leads ready to convert into paying customers for your business.',
-    features: [
-      'Real Estate Leads',
-      'Healthcare Leads',
-      'Education Leads',
-      'Finance Leads',
-      'Local Business Leads',
-    ],
-    metric: '18% Conv. Rate',
-    metricLabel: 'Conversion',
-  },
+{
+  id: 8,
+  title: 'AI Content Creation',
+  subtitle: 'Smart Content Solutions',
+  description:
+    'AI-powered content creation that helps your brand produce high-quality, engaging content faster and more consistently.',
+  features: [
+    'AI Blog Writing',
+    'Social Media Content',
+    'Ad Copy Generation',
+    'Email Marketing Content',
+    'Content Strategy',
+  ],
+  metric: '10× Faster Output',
+  metricLabel: 'Content Production',
+},
+{
+  id: 9,
+  title: 'Branding',
+  subtitle: 'Brand Identity',
+  description:
+    'Create a memorable and professional brand identity that builds trust and recognition in your market.',
+  features: [
+    'Brand Strategy',
+    'Logo & Visual Identity',
+    'Brand Guidelines',
+    'Brand Positioning',
+    'Marketing Collateral',
+  ],
+  metric: '100% Brand Consistency',
+  metricLabel: 'Identity Growth',
+},
+{
+  id: 10,
+  title: 'Influencer Marketing',
+  subtitle: 'Creator Partnerships',
+  description:
+    'Connect with trusted influencers to increase brand awareness, engagement, and customer acquisition.',
+  features: [
+    'Influencer Outreach',
+    'Campaign Management',
+    'Micro Influencer Campaigns',
+    'Performance Tracking',
+    'UGC Content Creation',
+  ],
+  metric: '5M+ Reach',
+  metricLabel: 'Audience Exposure',
+},
+{
+  id: 11,
+  title: 'Social Media Handle Setup',
+  subtitle: 'Platform Optimization',
+  description:
+    'Professional setup and optimization of social media profiles to establish a strong digital presence from day one.',
+  features: [
+    'Profile Creation',
+    'Bio Optimization',
+    'Page Branding',
+    'Business Verification',
+    'Account Configuration',
+  ],
+  metric: '100% Setup Score',
+  metricLabel: 'Profile Readiness',
+},
 ];
 
 /* ─── Per-service SVG illustrations ─────────────────────────────────────── */
@@ -649,6 +715,185 @@ function LeadIllustration() {
   );
 }
 
+
+function AIContentIllustration() {
+  return (
+    <svg viewBox="0 0 300 170" fill="none" className="w-full h-full">
+      <rect width="300" height="170" fill="#0d0d0d" />
+
+      <circle cx="150" cy="85" r="45"
+        fill="#FF6B00" fillOpacity="0.08"
+        stroke="#FF6B00"
+        strokeOpacity="0.4"
+      />
+
+      <circle cx="150" cy="85" r="18"
+        fill="#FF6B00"
+        fillOpacity="0.2"
+      />
+
+      {[90,120,180,210].map((x,i)=>(
+        <circle key={i}
+          cx={x}
+          cy={i%2?50:120}
+          r="8"
+          fill="#FF6B00"
+          fillOpacity="0.3"
+        />
+      ))}
+
+      <path d="M102 60L138 78" stroke="#FF6B00"/>
+      <path d="M162 78L198 60" stroke="#FF6B00"/>
+      <path d="M102 110L138 92" stroke="#FF6B00"/>
+      <path d="M162 92L198 110" stroke="#FF6B00"/>
+
+      <rect x="220" y="25" width="60" height="80" rx="8"
+        fill="#111"
+        stroke="#FF6B00"
+        strokeOpacity="0.3"
+      />
+    </svg>
+  );
+}
+function BrandingIllustration() {
+  return (
+    <svg viewBox="0 0 300 170" fill="none" className="w-full h-full">
+      <rect width="300" height="170" fill="#0d0d0d" />
+
+      <circle
+        cx="150"
+        cy="80"
+        r="40"
+        stroke="#FF6B00"
+        strokeWidth="2"
+        fill="#FF6B00"
+        fillOpacity="0.05"
+      />
+
+      <path
+        d="M150 40L180 80L150 120L120 80Z"
+        fill="#FF6B00"
+        fillOpacity="0.2"
+      />
+
+      <rect x="40" y="45" width="50" height="50" rx="8"
+        fill="#FF6B00" fillOpacity="0.08" />
+
+      <rect x="210" y="45" width="50" height="50" rx="8"
+        fill="#FF6B00" fillOpacity="0.08" />
+
+      <rect x="90" y="135" width="120" height="6" rx="3"
+        fill="#FF6B00" fillOpacity="0.3" />
+    </svg>
+  );
+}
+function InfluencerIllustration() {
+  return (
+    <svg viewBox="0 0 300 170" fill="none" className="w-full h-full">
+      <rect width="300" height="170" fill="#0d0d0d" />
+
+      <circle cx="150" cy="60" r="20"
+        fill="#FF6B00"
+        fillOpacity="0.25"
+      />
+
+      <circle cx="90" cy="100" r="12"
+        fill="#FF6B00"
+        fillOpacity="0.15"
+      />
+
+      <circle cx="210" cy="100" r="12"
+        fill="#FF6B00"
+        fillOpacity="0.15"
+      />
+
+      <path d="M150 80L90 100" stroke="#FF6B00"/>
+      <path d="M150 80L210 100" stroke="#FF6B00"/>
+
+      <path d="M150 80L150 125" stroke="#FF6B00"/>
+
+      <circle cx="150" cy="135" r="10"
+        fill="#FF6B00"
+        fillOpacity="0.2"
+      />
+
+      <rect
+        x="115"
+        y="20"
+        width="70"
+        height="10"
+        rx="5"
+        fill="#FF6B00"
+        fillOpacity="0.2"
+      />
+    </svg>
+  );
+}
+function HandleSetupIllustration() {
+  return (
+    <svg viewBox="0 0 300 170" fill="none" className="w-full h-full">
+      <rect width="300" height="170" fill="#0d0d0d" />
+
+      <rect
+        x="105"
+        y="15"
+        width="90"
+        height="140"
+        rx="16"
+        fill="#111"
+        stroke="#FF6B00"
+        strokeOpacity="0.4"
+      />
+
+      <circle cx="150" cy="45" r="16"
+        fill="#FF6B00"
+        fillOpacity="0.2"
+      />
+
+      <rect
+        x="125"
+        y="70"
+        width="50"
+        height="8"
+        rx="4"
+        fill="#FF6B00"
+        fillOpacity="0.3"
+      />
+
+      <rect
+        x="115"
+        y="90"
+        width="70"
+        height="6"
+        rx="3"
+        fill="#FF6B00"
+        fillOpacity="0.2"
+      />
+
+      <rect
+        x="115"
+        y="105"
+        width="70"
+        height="6"
+        rx="3"
+        fill="#FF6B00"
+        fillOpacity="0.2"
+      />
+
+      <circle cx="175" cy="130" r="10"
+        fill="#FF6B00"
+        fillOpacity="0.3"
+      />
+
+      <path
+        d="M170 130L174 134L182 124"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
 const illustrations = [
   MetaIllustration,
   GoogleIllustration,
@@ -657,6 +902,10 @@ const illustrations = [
   SEOIllustration,
   GraphicIllustration,
   LeadIllustration,
+  AIContentIllustration,
+  BrandingIllustration,
+  InfluencerIllustration,
+  HandleSetupIllustration,
 ];
 
 /* ─── Main component ─────────────────────────────────────────────────────── */

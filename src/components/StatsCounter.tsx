@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { end: 500, suffix: '+', label: 'Projects Completed' },
-  { end: 10000, suffix: '+', label: 'Leads Generated' },
-  { end: 200, suffix: '+', label: 'Happy Clients' },
-  { end: 50, suffix: 'L+', label: 'Ad Spend Managed' },
+  { end: 500, suffix: '+', label: 'Successful Campaigns' },
+  { end: 5000, suffix: '+', label: 'Qualified Leads Generated' },
+  { end: 50, suffix: '+', label: 'Businesses Trusted Us' },
+  { end: 20, suffix: 'L+', label: 'Ad Budget Managed' },
 ];
 
 function formatNumber(n: number): string {

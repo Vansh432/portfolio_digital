@@ -112,7 +112,7 @@ export default function ContactSection() {
           {/* Google Maps */}
           <div className="contact-map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14060.234567890123!2d79.41!3d28.367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a007a0e1234567%3A0x1234567890abcdef!2sBisalpur%20Road%2C%20Bareilly%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.949835576672!2d79.4619293!3d28.360366199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a00734c6f1507d%3A0xea99ca9706741e82!2sDizital%20Vigyapan%20-%20Digital%20Marketing%20Agency%20in%20Bareilly%20%7C%20Graphics%20Designing!5e0!3m2!1sen!2sin!4v1782325714526!5m2!1sen!2sin"
               width="100%"
               height="100%"
               loading="lazy"

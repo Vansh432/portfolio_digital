@@ -20,7 +20,7 @@ export default function AboutSection() {
           <div className="about-image-wrapper">
             <div className="about-image-main">
               <Image
-                src="/founder.png"
+                src="/about.png"
                 alt="Pramod Diwakar - Founder of Dizital Vigyapan"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -39,14 +39,10 @@ export default function AboutSection() {
               Who We Are — Your Growth <span>Partners</span>
             </h2>
             <p className="section-desc" style={{ marginBottom: '16px' }}>
-              Dizital Vigyapan is a full-service digital marketing agency dedicated
-              to helping businesses grow online. We combine creativity, strategy, and
-              technology to deliver measurable results.
+             Dizital Vigyapan is a performance-driven digital marketing agency in Bareilly dedicated to helping businesses grow online with creative strategy, high-converting advertising, and strong brand communication. We help local businesses, startups, clinics, institutes, and service providers generate leads, improve visibility, and build a stronger digital presence.
             </p>
             <p className="section-desc">
-              Whether you&apos;re a startup, local business, healthcare provider, real
-              estate company, educational institute, or e-commerce brand, our customized
-              marketing solutions help you attract more customers and increase revenue.
+             With services like Meta Ads, Google Ads, social media marketing, website design, lead generation, content creation, graphic design, and video editing, we create custom digital growth strategies that bring real business results — not just reach, but enquiries, trust, and conversions.
             </p>
 
             <div className="about-features">

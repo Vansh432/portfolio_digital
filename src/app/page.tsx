@@ -22,9 +22,10 @@ export default function Home() {
       <AboutSection />
       {/* <FounderSection /> */}
       <ServicesSection />
-      {/* <IndustriesSection /> */}
+      <IndustriesSection />
       <ProcessSection />
       <WhyTrustSection />
+            <FounderSection />
       <TestimonialsSection />
       {/* <ROICalculator /> */}
       {/* <ClientPhotos /> */}
