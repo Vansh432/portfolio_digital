@@ -217,6 +217,22 @@ const services = [
     metric: '18% Conv. Rate',
     metricLabel: 'Conversion',
   },
+  {
+  id: 8,
+  title: 'AI Content Creation',
+  subtitle: 'Smart Content Solutions',
+  description:
+    'AI-powered content creation that helps your brand produce high-quality, engaging content faster and more consistently.',
+  features: [
+    'AI Blog Writing',
+    'Social Media Content',
+    'Ad Copy Generation',
+    'Email Marketing Content',
+    'Content Strategy',
+  ],
+  metric: '10× Faster Output',
+  metricLabel: 'Content Production',
+},
     {
     id: 2,
     title: 'Google Ads',
@@ -300,22 +316,7 @@ const services = [
     metric: '200+ Designs / Mo',
     metricLabel: 'Output',
   },
-{
-  id: 8,
-  title: 'AI Content Creation',
-  subtitle: 'Smart Content Solutions',
-  description:
-    'AI-powered content creation that helps your brand produce high-quality, engaging content faster and more consistently.',
-  features: [
-    'AI Blog Writing',
-    'Social Media Content',
-    'Ad Copy Generation',
-    'Email Marketing Content',
-    'Content Strategy',
-  ],
-  metric: '10× Faster Output',
-  metricLabel: 'Content Production',
-},
+
 {
   id: 9,
   title: 'Branding',
