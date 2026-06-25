@@ -5,9 +5,9 @@ import { useRef } from 'react';
 
 const stats = [
   { value: '500+', label: 'Happy Clients', icon: '🏆' },
-  { value: '7+',   label: 'Years Experience', icon: '📅' },
-  { value: '50+',  label: 'Cities Served', icon: '📍' },
-  { value: '₹10Cr+', label: 'Ad Spend Managed', icon: '💰' },
+  { value: '5+',   label: 'Years Experience', icon: '📅' },
+  { value: '50+',  label: 'Businesses Trusted Us', icon: '📍' },
+  { value: '₹20L+', label: 'Ad Budget Managed', icon: '💰' },
 ];
 
 const trustCards = [
