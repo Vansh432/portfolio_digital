@@ -1068,7 +1068,7 @@
 
   .contact-map iframe {
     @apply w-full h-full border-0;
-    filter: grayscale(0.6) brightness(0.7) contrast(1.2);
+    /* filter: grayscale(0) brightness(0.7) contrast(1.2); */
   }
 
   .social-links {
