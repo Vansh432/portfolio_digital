@@ -14,7 +14,7 @@ export default function FounderSection() {
         <div className="founder-card grid grid-cols-1 md:grid-cols-[minmax(260px,380px)_1fr] gap-8 md:gap-12 items-start">
           {/* Founder Image — left column */}
           <div className="flex flex-col gap-5">
-            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_20px_40px_-12px_rgba(0,0,0,0.25)]">
+            <div className="relative w-full h-[370px] aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_20px_40px_-12px_rgba(0,0,0,0.25)]">
               <Image
                 src="/founder.png"
                 alt="Pramod Diwakar - Founder of Dizital Vigyapan"
@@ -24,7 +24,7 @@ export default function FounderSection() {
             </div>
 
             {/* Stats sit under the image on the left, anchoring it visually */}
-            <div className="grid grid-cols-3 gap-2">
+            {/* <div className="grid grid-cols-3 gap-2">
               <div className="text-center rounded-[10px] bg-black/[0.03] px-1 py-3">
                 <div className="text-xl font-extrabold leading-tight">5+</div>
                 <div className="mt-1 text-[11px] text-neutral-500">Years Exp.</div>
@@ -37,7 +37,7 @@ export default function FounderSection() {
                 <div className="text-xl font-extrabold leading-tight">200+</div>
                 <div className="mt-1 text-[11px] text-neutral-500">Clients</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Founder Info — right column */}
@@ -62,7 +62,7 @@ export default function FounderSection() {
             </p>
 
             {/* Founder's Vision — styled as a distinct quoted callout */}
-            <div className="mb-8 rounded-r-xl border-l-[3px] border-[#d97757] bg-[#d97757]/[0.06] px-6 py-5">
+            {/* <div className="mb-8 rounded-r-xl border-l-[3px] border-[#d97757] bg-[#d97757]/[0.06] px-6 py-5">
               <p className="mb-2.5 text-xs font-bold uppercase tracking-[0.08em] text-[#d97757]">
                 Founder&rsquo;s Vision
               </p>
@@ -75,10 +75,10 @@ export default function FounderSection() {
                 promotion — it&rsquo;s about creating growth opportunities for every
                 business that wants to move forward.
               </p>
-            </div>
+            </div> */}
 
             {/* Contact Info */}
-            <div className="flex flex-wrap gap-3">
+            {/* <div className="flex flex-wrap gap-3">
               <a
                 href="tel:+918899316670"
                 className="btn btn-primary px-5 py-2.5 text-[13px]"
@@ -99,7 +99,7 @@ export default function FounderSection() {
               >
                 💬 WhatsApp Chat
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

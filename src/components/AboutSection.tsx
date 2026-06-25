@@ -1,14 +1,16 @@
 import Image from 'next/image';
 
-const features = [
-  'Industry-Specific Strategies',
-  'Experienced Marketing Experts',
-  'Creative Design Team',
-  'Transparent Reporting',
-  'Affordable Pricing',
-  'Result-Oriented Campaigns',
-  'Dedicated Support',
-  'Data-Driven Decisions',
+const stats = [
+  { number: '5+', label: 'Years Experience' },
+  { number: '200+', label: 'Clients Served' },
+  { number: '10+', label: 'Services Offered' },
+  { number: '98%', label: 'Client Satisfaction' },
+];
+
+const highlights = [
+  { icon: '🎯', title: 'Performance-Driven', desc: 'Every campaign is built to deliver measurable ROI, not just impressions.' },
+  { icon: '🧠', title: 'Custom Strategy', desc: 'No templates — we build digital growth plans tailored to your business.' },
+  { icon: '📍', title: 'Local + Digital Reach', desc: 'We help Bareilly businesses dominate both local search and social media.' },
 ];
 
 export default function AboutSection() {
@@ -26,10 +28,10 @@ export default function AboutSection() {
                 style={{ objectFit: 'cover' }}
               />
             </div>
-            <div className="about-experience-badge">
+            {/* <div className="about-experience-badge">
               <div className="number">5+</div>
               <div className="label">Years Experience</div>
-            </div>
+            </div> */}
           </div>
 
           {/* Content Side */}
@@ -39,20 +41,38 @@ export default function AboutSection() {
               Who We Are — Your Growth <span>Partners</span>
             </h2>
             <p className="section-desc" style={{ marginBottom: '16px' }}>
-             Dizital Vigyapan is a performance-driven digital marketing agency in Bareilly dedicated to helping businesses grow online with creative strategy, high-converting advertising, and strong brand communication. We help local businesses, startups, clinics, institutes, and service providers generate leads, improve visibility, and build a stronger digital presence.
+              Dizital Vigyapan is a performance-driven digital marketing agency in Bareilly dedicated to helping businesses grow online with creative strategy, high-converting advertising, and strong brand communication.
             </p>
-            <p className="section-desc">
-             With services like Meta Ads, Google Ads, social media marketing, website design, lead generation, content creation, graphic design, and video editing, we create custom digital growth strategies that bring real business results — not just reach, but enquiries, trust, and conversions.
+            <p className="section-desc" style={{ marginBottom: '32px' }}>
+              From Meta Ads and Google Ads to website design, lead generation, and video editing — we build custom digital growth strategies that bring real results: enquiries, trust, and conversions.
             </p>
 
-            <div className="about-features">
-              {features.map((f) => (
-                <div key={f} className="about-feature-item">
-                  <span className="icon">✦</span>
-                  {f}
+            {/* Stats Row */}
+            <div className="about-stats-row">
+              {stats.map((s) => (
+                <div key={s.label} className="about-stat-card">
+                  <div className="about-stat-number">{s.number}</div>
+                  <div className="about-stat-label">{s.label}</div>
                 </div>
               ))}
             </div>
+
+            {/* Highlights */}
+            <div className="about-highlights">
+              {highlights.map((h) => (
+                <div key={h.title} className="about-highlight-item">
+                  <span className="about-highlight-icon">{h.icon}</span>
+                  <div>
+                    <div className="about-highlight-title">{h.title}</div>
+                    <div className="about-highlight-desc">{h.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <a href="#contact" className="about-cta-btn">
+              Work With Us <span>→</span>
+            </a>
           </div>
         </div>
       </div>
