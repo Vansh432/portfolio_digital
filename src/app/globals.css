@@ -138,7 +138,7 @@
   }
 
   .section-desc {
-    @apply text-[17px] text-[#A0A0A0] max-w-[640px] leading-[1.7];
+    @apply text-[17px] text-[#A0A0A0] leading-[1.7];
   }
 
   /* Buttons */
@@ -505,7 +505,7 @@
   /* About */
   .about-grid {
     @apply grid gap-[60px] items-center;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 620px 1fr;
   }
 
   .about-image-wrapper {
@@ -513,7 +513,8 @@
   }
 
   .about-image-main {
-    @apply rounded-[20px] overflow-hidden border-2 border-white/[0.08] aspect-[3/4] relative;
+    @apply rounded-[20px] overflow-hidden border-2 border-white/[0.08] relative;
+    aspect-ratio: 4 / 3;
   }
 
   .about-image-main img {
@@ -1256,7 +1257,7 @@
 @media (max-width: 1024px) {
   .services-grid { @apply grid-cols-2; }
   .industries-grid { @apply grid-cols-2; }
-  .about-grid { @apply gap-10; grid-template-columns: 300px 1fr; }
+  .about-grid { @apply gap-10; grid-template-columns: 420px 1fr; }
   .footer-grid { @apply grid-cols-2; }
   .founder-card {
     grid-template-columns: 280px 1fr;
