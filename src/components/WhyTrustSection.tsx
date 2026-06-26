@@ -144,7 +144,7 @@ export default function WhyTrustSection() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="#contact"
+                href="#free-audit"
                 className="inline-flex items-center justify-center gap-2
                   bg-[#FF6B00] hover:bg-[#e05e00] text-white font-semibold text-[14px]
                   px-6 py-3.5 rounded-xl transition-all duration-200

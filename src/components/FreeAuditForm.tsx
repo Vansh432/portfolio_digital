@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 export default function FreeAuditForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,11 +15,33 @@ export default function FreeAuditForm() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setFormData({ name: '', email: '', phone: '', website: '', industry: '', message: '' });
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('https://api.dizitalvigyapan.com/api/mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          websiteURL: formData.website,
+          industry: formData.industry,
+          message: formData.message,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.status) throw new Error(data.message || 'Something went wrong');
+      setSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', website: '', industry: '', message: '' });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Failed to send. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -116,12 +140,19 @@ export default function FreeAuditForm() {
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             />
           </div>
+          {error && (
+            <div className="full-width" style={{ textAlign: 'center', color: '#ff4d4d', fontSize: '14px', marginTop: '4px' }}>
+              {error}
+            </div>
+          )}
           <div className="full-width" style={{ textAlign: 'center' }}>
-            <button type="submit" className="btn btn-primary" style={{ padding: '16px 48px', fontSize: '16px' }}>
-              Get My Free Audit Report
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
+            <button type="submit" className="btn btn-primary" disabled={loading} style={{ padding: '16px 48px', fontSize: '16px', opacity: loading ? 0.7 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}>
+              {loading ? 'Sending...' : 'Get My Free Audit Report'}
+              {!loading && (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              )}
             </button>
           </div>
         </form>

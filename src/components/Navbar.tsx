@@ -124,7 +124,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <a href="#contact" className="btn btn-primary nav-cta" style={{ display: 'inline-flex' }}>
+          <a href="#free-audit" className="btn btn-primary nav-cta" style={{ display: 'inline-flex' }}>
             Get Free Consultation
           </a>
 
