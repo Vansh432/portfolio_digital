@@ -14,14 +14,39 @@ function EnquiryModal({
 }) {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((p) => ({ ...p, [k]: e.target.value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError('');
+    setLoading(true);
+    try {
+      const response = await fetch('https://portfolio-backend-2-jet.vercel.app/api/mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: form.name,
+          phone: form.phone,
+          email: form.email,
+          industry: service,
+          message: form.message,
+        }),
+      });
+      const data = await response.json();
+      if (!response.ok || !data.status) throw new Error(data.message || 'Something went wrong');
+      setSubmitted(true);
+      setForm({ name: '', email: '', phone: '', message: '' });
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Failed to send. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   return (
     <div
@@ -139,16 +164,23 @@ function EnquiryModal({
               />
             </div>
 
+            {error && (
+              <p className="text-center text-[13px] text-red-400">{error}</p>
+            )}
+
             <button
               type="submit"
+              disabled={loading}
               className="w-full bg-[#FF6B00] hover:bg-[#e05e00] text-white font-bold text-[15px]
                 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5
                 shadow-[0_4px_20px_rgba(255,107,0,0.4)] hover:shadow-[0_8px_32px_rgba(255,107,0,0.55)]
-                flex items-center justify-center gap-2">
-              Send Enquiry
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+                flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0">
+              {loading ? 'Sending...' : 'Send Enquiry'}
+              {!loading && (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              )}
             </button>
 
             <p className="text-center text-[11px] text-[#555]">

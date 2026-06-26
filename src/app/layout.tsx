@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 import WhatsAppButton from '@/components/WhatsAppButton';
 import StickyConsultation from '@/components/StickyConsultation';
 import LoadingScreen from '@/components/LoadingScreen';
@@ -50,6 +52,11 @@ export const metadata: Metadata = {
     title: 'Dizital Vigyapan | Digital Marketing Agency in Bareilly',
     description:
       'Results-driven digital marketing agency offering SEO, Ads, SMM, Website Design & Lead Generation.',
+  },
+  icons: {
+    icon: '/vigyapan logo222.png',
+    shortcut: '/vigyapan logo222.png',
+    apple: '/vigyapan logo222.png',
   },
   robots: {
     index: true,
@@ -105,6 +112,7 @@ export default function RootLayout({
         <LoadingScreen />
         <Navbar />
         <main>{children}</main>
+         <GoogleAnalytics  gaId={process.env.NEXT_PUBLIC_GA_ID!} />
         <WhatsAppButton />
         <StickyConsultation />
       </body>
